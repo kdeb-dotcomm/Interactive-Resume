@@ -1,0 +1,146 @@
+:root {
+    --bg-color: #f2f5f7;
+    --text-color: #333;
+    --card-bg: #ffffff;
+}
+
+body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --card-bg: #1e1e1e;
+  }
+  
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  padding-bottom: 20px;
+}
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    background: #2a9d8f;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+.profile-container {
+  width: 150px;
+  height: 150px;
+  margin: 20px auto;
+  /* background-color: var(--card-bg); */
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
+  overflow: hidden;
+}
+.profile-container img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: none;
+  object-fit: cover;
+}
+
+.profile-history P {
+  color: #2a6f6a;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.download-btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  background: #2a9d8f;
+  color: white;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.download-btn:hover {
+  background: #21867a;
+}
+section {
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.skills .skill {
+  margin-bottom: 15px;
+}
+.bar {
+  background: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 15px;
+}
+
+.progress {
+  height: 15px;
+  background: #2a9d8f;
+  cursor: pointer;
+  animation: load 1s ease-in-out;
+}
+
+@keyframes load {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.entry {
+  margin-bottom: 20px;
+}
+
+.entry h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+.entry span {
+  font-size: 0.9rem;
+  color: #888;
+  display: block;
+  margin-bottom: 5px;
+}
+.footer-img {
+    width: 24px;
+    height: 24px;
+    
+}
+
+.footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+footer {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9rem;
+    color: #555;
+    
+  }
+  .footer-line {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 40px auto 20px;
+    width: 80%;
+  }
