@@ -12,7 +12,12 @@
   </head>
   <body>
     <header>
-        <button id="theme-toggle">🌓</button>
+      <div>
+        <div class="slider">
+          <input type="radio" name="slider" id="slider-1" checked />
+          <input type="radio" name="slider" id="slider-2" />
+      </div>
+        
       <div class="profile-container">
         <img
           src="images/IMG_4774.jpg"
@@ -24,7 +29,7 @@
       <div class="profile-history">
         <h1>Eugene Debrah</h1>
         <p  >Aspiring Data Scientist & Software Developer</p>
-        <button class="download-btn">Download Resume</button>
+        <button class="download-btn" id="downloader">Download Resume</button>
       </div>
     </header>
 
@@ -86,10 +91,33 @@
             <h3>Research Project - Stochastic Mortality Modelling</h3>
             <span>2023 - September 2024</span>
             <p>Conducted a comparative study of stochastic mortality models using R and actuarial methods. Models used were Lee Carter, Age Period Cohort and CBD models.</p>
-            <button class="download-btn">Download PDF</button>
+            <button class="download-btn" id="pdf-downloader">Download PDF</button>
             <button class="download-btn">View Project</button>
         </div>
         <hr class="footer-line">
+    </section>
+    <section>
+      <form>
+        <div class="form-container" id="modal">
+          <button class="exit" id="exit">X</button>
+          <h2>To Download to your email</h2>
+          <p>Enter your name and email to receive the latest updates and my CV.</p>
+            <div class="form-attributes">
+                <label for="name">Name:</label>
+                <input type="text" placeholder="Your Name" required />
+                <label for="email">Email:</label>
+                <input type="email" placeholder="Your Email" required />
+            </div>
+        
+        <div>
+          <button type="submit" class="download-btn" id="final-downloader">Download</button>
+        </div>
+        
+        </div>
+        
+      </form>
+    </section>
+    
         <footer>
             <div class="footer-container">
                 <p>Connect with me:</p>
