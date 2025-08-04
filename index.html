@@ -12,11 +12,15 @@
   </head>
   <body>
     <header>
-      <div>
-        <div class="slider">
-          <input type="radio" name="slider" id="slider-1" />
-          <input type="radio" name="slider" id="slider-2" checked />
+      <div class="theme-toggle">
+        <input type="checkbox" id="toggle" />
+        <label for="toggle" class="toggle-label">
+          <span class="icon moon">🌙</span>
+          <span class="icon sun">☀️</span>
+          <span class="ball"></span>
+        </label>
       </div>
+      
         
       <div class="profile-container">
         <img
@@ -97,16 +101,16 @@
         <hr class="footer-line">
     </section>
     <section>
-      <form>
+      <form id="form" method="post"> 
         <div class="form-container" id="modal">
-          <button class="exit" id="exit">X</button>
+          <button class="exit" id="exit" type="button">X</button>
           <h2>To Download to your email</h2>
           <p>Enter your name and email to receive the latest updates and my CV.</p>
             <div class="form-attributes">
                 <label for="name">Name:</label>
-                <input type="text" placeholder="Your Name" required />
+                <input type="text" name ="name" placeholder="Your Name" id="name" required />
                 <label for="email">Email:</label>
-                <input type="email" placeholder="Your Email" required />
+                <input type="email" placeholder="Your Email" name="email" id="email" required />
             </div>
         
         <div>

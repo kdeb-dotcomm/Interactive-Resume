@@ -10,40 +10,77 @@ body.dark-mode {
   --card-bg: #1e1e1e;
 }
 
-body.light-mode {
-  --bg-color: #ffffff;
-  --text-color: #111111;
-  --card-bg: #f2f2f2;
+body.light {
+  background-color: #ffffff;
+  color: #222;
 }
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  line-height: 1.6;
+  background-color: #121212;
+  color: white;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: background-color 0.5s, color 0.5s;
 }
 
 header {
   text-align: center;
   padding-bottom: 20px;
 }
-/* #theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 8px 12px;
-    background: #2a9d8f;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    z-index: 1000;
-  } */
 
-.slider {
+.theme-toggle {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  
+  
+  
+}
+.theme-toggle {
+    background-color: #2d2d2d;
+    width: 60px;
+    height: 40px;
+    border-radius: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 10px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .toggle-label .icon {
+    z-index: 2;
+    font-size: 20px;
+  }
+
+  .toggle-label .ball {
+    position: absolute;
+    left: 5px;
+    top: 9px;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+  
+  input[type="checkbox"]:checked + .toggle-label .ball {
+    transform: translateX(40px);
+  }
+
+
+/* .slider {
   position: fixed;
   top: 20px;
   right: 20px;
@@ -67,26 +104,14 @@ header {
 #slider-2:checked {
   background-color: #2a9d8f;
   border: none;
-}
+} */
 
-/* #slider-1:checked::after{
-    content: "🌞";
-    color: white;
-    font-size: 14px;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    bottom: 2px;
-    right: 2px;
-    margin: auto;
-  } */
+
 
 .profile-container {
   width: 150px;
   height: 150px;
   margin: 20px auto;
-  /* background-color: var(--card-bg); */
-  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); */
   overflow: hidden;
 }
 .profile-container img {
@@ -188,6 +213,7 @@ footer {
 }
 
 .form-container {
+  display: none;
   position: fixed;
   top: 50%;
   left: 50%;

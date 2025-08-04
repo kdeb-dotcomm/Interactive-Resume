@@ -1,47 +1,50 @@
 
-  const toggleBtn = document.getElementById('theme-toggle')
+  const toggleBtn = document.getElementById('toggle')
   const toggleBtn1 = document.getElementById('slider-1')
   const toggleBtn2 = document.getElementById('slider-2')
   const downloadBtn = document.getElementById('downloader')
+  const form = document.getElementById('form')
   const finalDownloadBtn = document.getElementById('final-downloader')
   const modal = document.getElementById('modal')
   const closeModalBtn = document.getElementById('exit')
 
-  toggleBtn1.addEventListener('click', () => {
-    if(toggleBtn1.checked) {
-      document.body.classList.add('dark-mode');
-      document.body.classList.remove('white-mode');
-    } 
+  toggle.addEventListener('change', (event) => {
+    // Toggle the class 'dark' on the body element
+    event.preventDefault();
+    document.body.classList.toggle('light');
     
   });
 
-  toggleBtn2.addEventListener('click', () => {
-    if (toggleBtn2.checked) {
-      document.body.classList.add('white-mode');
-      document.body.classList.remove('dark-mode');
-    }
-  });
+  
 
   modal.style.display = 'none';
 
   downloadBtn.addEventListener('click', (e) => {
     e.preventDefault();
     setTimeout(() => {
-      modal.style.display = 'inline';
+      modal.style.display = 'block';
       
-    }, 1000);
+    }, 500);
   })
 
-  finalDownloadBtn.addEventListener('click', (e) => {
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
+
+     // Check if form is valid
+  if (!form.checkValidity()) {
+    form.reportValidity(); // shows native HTML5 validation
+    return form;
+    console.log('Form is invalid');
+  }
+
     modal.style.display = 'none';
     // alert('Download started!');
     setTimeout(() => {
       alert('Download started!');
-    }, 2000);
+    }, 1000);
   })
 
   closeModalBtn.addEventListener('click', (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     modal.style.display = 'none';
   })
