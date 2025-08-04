@@ -1,10 +1,7 @@
 
   const toggleBtn = document.getElementById('toggle')
-  const toggleBtn1 = document.getElementById('slider-1')
-  const toggleBtn2 = document.getElementById('slider-2')
   const downloadBtn = document.getElementById('downloader')
   const form = document.getElementById('form')
-  const finalDownloadBtn = document.getElementById('final-downloader')
   const modal = document.getElementById('modal')
   const closeModalBtn = document.getElementById('exit')
 
